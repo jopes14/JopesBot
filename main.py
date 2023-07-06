@@ -1,9 +1,10 @@
 import discord
+import random
 from discord.ext import commands
-from Data import 
+from Data import GetCharactersNames, GetGlidersNames, GetKartsNames, GetWheelsNames, CharacterData, KartData, WheelData, GliderData
 activity = discord.Activity(type=discord.ActivityType.watching, name="you while you sleep")
 bot = commands.Bot(activity=activity)
-TOKEN = ''
+TOKEN = 'OTk3NTUwMDU1NTI1NDY2MjEy.Gq3sbM.u-dtaT_LXJdQKJuIkEvhFSGy3ais0ckRz_1jXc'
 @bot.event
 async def on_message(ctx):
     if ctx.author.id == 987931629685194782 and random.randint(0,100) < 3:
@@ -21,7 +22,7 @@ async def on_message(ctx):
         await ctx.add_reaction(":emoji_6:1050214712282984498")
         await ctx.add_reaction(":wafflesdum:1066104213177909258")
         await ctx.add_reaction("a:luigi:1049864795119177818")   
-@bot.slash_command(name="first_slash", guild_ids=[1013085921647792168])
-async def first_slash(ctx): 
+@bot.slash_command(name="karttest", guild_ids=[1013085921647792168])
+async def first_slash(ctx: discord.ApplicationContext, character: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetCharactersNames)), kart: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetKartsNames)), wheel: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetWheelsNames)), glider: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetGlidersNames))): 
     await ctx.respond("You executed the slash command!")
 bot.run(TOKEN)
