@@ -7,7 +7,7 @@ async def GetKartsNames(ctx: discord.AutocompleteContext):
 async def GetWheelsNames(ctx: discord.AutocompleteContext):
     return ['Standard', 'Blue Standard', 'GLA Tires', 'Monster', 'Hot Monster', 'Ancient Tires', 'Roller', 'Azure Roller', 'Slim', 'Wood', 'Crimson Slim', 'Slick', 'Cyber Slick', 'Metal', 'Gold Tires', 'Button', 'Leaf Tires', 'Off-Road', 'Retro Off-Road', 'Triforce Tires', 'Sponge', 'Cushion']
 async def GetGlidersNames(ctx: discord.AutocompleteContext):
-    return ['Super Glider', 'Waddle WIng', 'Hylian Kite', 'Cloud Glider', 'Parachute', 'Flower Glider', 'Paper Glider', 'Wario Wing', 'Plane Glider', 'Gold Glider', 'Paraglider', 'Peach Parasol', 'Parafoil', 'Bowser Kite', 'MKTV Parafoil']
+    return ['Super Glider', 'Waddle Wing', 'Hylian Kite', 'Cloud Glider', 'Parachute', 'Flower Glider', 'Paper Glider', 'Wario Wing', 'Plane Glider', 'Gold Glider', 'Paraglider', 'Peach Parasol', 'Parafoil', 'Bowser Kite', 'MKTV Parafoil']
 CharacterData = {
     'Baby Peach':{'Speed':2.5,'MiniTurbo':4.5,'Emojii':'<:MK8_BabyPeach_Icon:1126298586724978739>'},
     'Baby Daisy':{'Speed':2.5,'MiniTurbo':4.5,'Emojii':'<:MK8_BabyDaisy_Icon:1126298527891472504>'}, 
@@ -26,13 +26,13 @@ CharacterData = {
     'Toad':{'Speed':3.25,'MiniTurbo':4.25,'Emojii':'<:MK8_Toad_Icon:1126298895518023690>'}, 
     'Shy Guy':{'Speed':3.25,'MiniTurbo':4.25,'Emojii':'<:MK8_ShyGuy_Icon:1126298893110493215>'}, 
     'Larry':{'Speed':3.25,'MiniTurbo':4.25,'Emojii':'<:MK8_Larry_Icon:1126298680840966274>'}, 
-    'Cat Peach':{'Speed':3.5,'MiniTurbo':3.75,'Emojii':'<:MK8_Cat_Peach_Icon:1126298629418799105>'}, 
-    'Inkling Girl':{'Speed':3.5,'MiniTurbo':3.75,'Emojii':'<:MK8DX_Female_Inkling_Icon:1126298982549815317>'}, 
-    'Female Villager':{'Speed':3.5,'MiniTurbo':3.75,'Emojii':'<:VillagerFemaleIconMK8:1126299546759200829>'}, 
-    'Peach':{'Speed':3.75,'MiniTurbo':3.75,'Emojii':'<:MK8_Peach_Icon:1126298805910908979>'}, 
-    'Daisy':{'Speed':3.75,'MiniTurbo':3.75,'Emojii':'<:MK8_Daisy_Icon:1126298630802907217>'}, 
-    'Yoshi':{'Speed':3.75,'MiniTurbo':3.75,'Emojii':'<:MK8_Yoshi_Icon:1126298935485534269>'}, 
-    'Birdo':{'Speed':3.75,'MiniTurbo':3.75,'Emojii':'<:MK8D_Birdo_Icon:1126298976510021633>'}, 
+    'Cat Peach':{'Speed':3.5,'MiniTurbo':4,'Emojii':'<:MK8_Cat_Peach_Icon:1126298629418799105>'}, 
+    'Inkling Girl':{'Speed':3.5,'MiniTurbo':4,'Emojii':'<:MK8DX_Female_Inkling_Icon:1126298982549815317>'}, 
+    'Female Villager':{'Speed':3.5,'MiniTurbo':4,'Emojii':'<:VillagerFemaleIconMK8:1126299546759200829>'}, 
+    'Peach':{'Speed':3.75,'MiniTurbo':4.25,'Emojii':'<:MK8_Peach_Icon:1126298805910908979>'}, 
+    'Daisy':{'Speed':3.75,'MiniTurbo':4.25,'Emojii':'<:MK8_Daisy_Icon:1126298630802907217>'}, 
+    'Yoshi':{'Speed':3.75,'MiniTurbo':4.25,'Emojii':'<:MK8_Yoshi_Icon:1126298935485534269>'}, 
+    'Birdo':{'Speed':3.75,'MiniTurbo':4.25,'Emojii':'<:MK8D_Birdo_Icon:1126298976510021633>'}, 
     'Tanooki Mario':{'Speed':3.75,'MiniTurbo':4,'Emojii':'<:MK8_Tanooki_Mario_Icon:1126327270076842024>'}, 
     'Inkling Boy':{'Speed':3.75,'MiniTurbo':4,'Emojii':'<:MK8DX_Male_Inkling_Icon:1126299041282674748>'}, 
     'Male Villager':{'Speed':3.75,'MiniTurbo':4,'Emojii':'<:VillagerMaleIconMK8:1126299547677753394>'}, 
