@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 async def GetCharactersNames(ctx: discord.AutocompleteContext):
-    return ['Baby Peach', 'Baby Daisy', 'Baby Rosalina', 'Lemmy', 'Baby Mario', 'Baby Luigi', 'Dry Bones', 'Light Mii', 'Toadette', 'Wendy', 'Isabelle', 'Koopa Troopa', 'Lakitu', 'Bowser Jr.', 'Toad', 'Shy Guy', 'Larry', 'Cat Peach', 'Inkling Girl', 'Female Villager', 'Peach', 'Daisy', 'Yoshi', 'Birdo', 'Tanooki Mario', 'Inkling Boy', 'Male Villager', 'Mario', 'Ludwig', 'Medium Mii', 'Luigi', 'Iggy', 'Rosalina', 'King Boo', 'Link', 'Metal Mario', 'Gold Mario', 'Pink Gold Peach', 'Waluigi', 'Donkey Kong', 'Roy', 'Wario', 'Dry Bowser', 'Bowser', 'Morton', 'Heavy Mii']
+    return ['Baby Peach', 'Baby Daisy', 'Baby Rosalina', 'Lemmy', 'Baby Mario', 'Baby Luigi', 'Dry Bones', 'Light Mii', 'Toadette', 'Wendy', 'Isabelle', 'Koopa Troopa', 'Lakitu', 'Bowser Jr.', 'Toad', 'Shy Guy', 'Larry', 'Cat Peach', 'Inkling Girl', 'Female Villager', 'Peach', 'Daisy', 'Yoshi', 'Birdo', 'Tanooki Mario', 'Inkling Boy', 'Male Villager', 'Mario', 'Ludwig', 'Medium Mii', 'Luigi', 'Iggy', 'Rosalina', 'King Boo', 'Link', 'Metal Mario', 'Gold Mario', 'Pink Gold Peach', 'Waluigi', 'Donkey Kong', 'Roy', 'Wario', 'Dry Bowser', 'Bowser', 'Morton', 'Heavy Mii', 'Petey Piranha', 'Wiggler', 'Kamek']
 async def GetKartsNames(ctx: discord.AutocompleteContext):
     return ['Standard Kart', 'The Duke', '300 SL Roadster', 'Pipe Frame', 'Varmint', 'City Tripper', 'Mach 8', 'Sports Coupe', 'Inkstriker', 'Steel Driver', 'Tri-Speeder', 'Bone Rattler', 'Cat Cruiser', 'Teddy Buggy', 'Comet', 'Yoshi Bike', 'Circuit Special', 'B-Dasher', 'P-Wing', 'Badwagon', 'GLA', 'Standard ATV', 'Prancer', 'Sport Bike', 'Jet Bike', 'Biddybuggy', 'Mr Scooty',' Landship', 'Streetle', 'Sneaker', 'Gold Standard', 'Master Cycle', 'W 25 Silver Arrow', 'Standard Bike', 'Flame Rider', 'Wild Wiggler', 'Blue Falcon', 'Splat Buggy', 'Tanooki Kart', 'Koopa Clown', 'Master Cycle Zero']
 async def GetWheelsNames(ctx: discord.AutocompleteContext):
@@ -54,7 +54,10 @@ CharacterData = {
     'Dry Bowser':{'Speed':4.75,'MiniTurbo':3.25,'Emojii':'<:MK8_Dry_Bowser_Icon:1126298633101393930>'}, 
     'Bowser':{'Speed':4.75,'MiniTurbo':3.25,'Emojii':'<:MK8_Bowser_Icon:1126298590332067993>'}, 
     'Morton':{'Speed':4.75,'MiniTurbo':3.25,'Emojii':'<:MK8_Morton_Icon:1126298805021704232>'}, 
-    'Heavy Mii':{'Speed':4.75,'MiniTurbo':3.25,'Emojii':'<:Mii_MK8:1126298535449595935>'}
+    'Heavy Mii':{'Speed':4.75,'MiniTurbo':3.25,'Emojii':'<:Mii_MK8:1126298535449595935>'},
+    'Petey Piranha':{'Speed':4.25,'MiniTurbo':3.5,'Emojii':'<:MK8DX_Petey_Piranha_Icon:1130989369226960967>'},
+    'Wiggler':{'Speed':4.4,'MiniTurbo':3.5,'Emojii':'<:MK8DX_Wiggler_Icon:1130989367209496790>'},
+    'Kamek':{'Speed':4,'MiniTurbo':4,'Emojii':'<:MK8DX_Kamek_Icon:1130989365556953189>'}
     }
 KartData = {
     'Standard Kart':{'Speed':0,'MiniTurbo':0,'Emojii':'<:StandardKartBodyMK8:1126299500982571158>'}, 
