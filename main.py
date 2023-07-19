@@ -4,7 +4,7 @@ from discord.ext import commands
 from Data import GetCharactersNames, GetGlidersNames, GetKartsNames, GetWheelsNames, CharacterData, KartData, WheelData, GliderData
 activity = discord.Activity(type=discord.ActivityType.watching, name="you while you sleep")
 bot = commands.Bot(activity=activity)
-TOKEN = 'OTk3NTUwMDU1NTI1NDY2MjEy.G7Gm8Y.TaulUkHaJJIHF7LGeppm8FLRFPgLTkjVfmaCOU'
+TOKEN = 'OTk3NTUwMDU1NTI1NDY2MjEy.GOFfNx.95rWUt8XLjAsvGabuLNbO8VWaa-b4OLtmm_dQ4'
 @bot.event
 async def on_message(ctx):
     if ctx.author.id == 987931629685194782 and random.randint(0,100) < 3:
@@ -22,17 +22,17 @@ async def on_message(ctx):
         await ctx.add_reaction(":emoji_6:1050214712282984498")
         await ctx.add_reaction(":wafflesdum:1066104213177909258")
         await ctx.add_reaction("a:luigi:1049864795119177818")   
-@bot.slash_command(name="karttest", guild_ids=[1013085921647792168])
+@bot.slash_command(name="karttest")
 async def first_slash(ctx: discord.ApplicationContext, character: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetCharactersNames)), kart: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetKartsNames)), wheel: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetWheelsNames)), glider: discord.Option(str, autocomplete=discord.utils.basic_autocomplete(GetGlidersNames))): 
     Aspeed = (CharacterData[character]['Speed']+KartData[kart]['Speed']+WheelData[wheel]['Speed']+GliderData[glider]['Speed'])
     Aminiturbo = (CharacterData[character]['MiniTurbo']+KartData[kart]['MiniTurbo']+WheelData[wheel]['MiniTurbo']+GliderData[glider]['MiniTurbo'])
     x = (Aspeed-.75)*4 #speed = x
     y = (Aminiturbo-.75)*4#miniturbo = y
-    weight = round((1.006*((((.005*y)*((x*.025)+7.45))*((8.9*((y*1)+20))+(8.8*((y*2)+70))+(2.7*((y*3)+120))))+(((8.9*(y*1))+(8.8*(y*2))+(2.7*(y*3)))*((1.05+(.005*y))*((x*.025)+7.45)))+(((y*1)+15)*((.05*y)*((x*.025)+7.45)))+((y*1)*((.05*y+(1.30))*((x*.025)+7.45)))))+(.88*(8640*(.025*x))))
-    weightpercentile = round((weight-4875)/38.84)
+    weight = round(((1+(.006*y))*((((.005*y)*((x*.025)+7.45))*((8.9*((y*1)+20))+(8.8*((y*2)+70))+(2.7*((y*3)+120))))+(((8.9*(y*1))+(8.8*(y*2))+(2.7*(y*3)))*(((1.05+(.005*y))*((x*.025)+7.45)))-((x*.025)+7.45))+(((y*1)+15)*((.05*y)*((x*.025)+7.45)))+((y*1)*((.05*y+(1.30))*((x*.025)+7.45)))))+(.88*(8640*(.025*x))))
+    weightpercentile = round((weight-4699)/48.69)
     embed=discord.Embed(title="KartTest", description=CharacterData[character]['Emojii']+KartData[kart]['Emojii']+WheelData[wheel]['Emojii']+GliderData[glider]['Emojii'], color=0x00ffaa)
     embed.add_field(name="Parts:", value="Character: " + character + CharacterData[character]['Emojii'] + '   Kart: ' + kart + KartData[kart]['Emojii'] + '   Wheel: ' + wheel + WheelData[wheel]['Emojii'] + '   Glider: ' + glider + GliderData[glider]['Emojii'], inline=False)
-    embed.add_field(name="Score:", value="Speed: " + str(x) + '\nMiniTurbo: ' + str(y) +'\n\n**Weight: ' + str(weight) +'**', inline=True)
+    embed.add_field(name="Score:", value="Speed: " + str(round(x)) + '\nMiniTurbo: ' + str(round(y)) +'\n\n**Weight: ' + str(weight) +'**', inline=True)
     embed.add_field(name="Percentile: " + str(weightpercentile), value=('\n(out of 100 karts this one would be better than ' + str(weightpercentile) + '\nof them)'), inline=True)
     embed.set_footer(text="Developed by Jopes on Youtube")
     await ctx.respond(embed=embed)
