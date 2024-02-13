@@ -1,2 +1,2 @@
 # JopesBot
-fuck me im tired of making the database lmao
+idek how this shit runs
