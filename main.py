@@ -6,6 +6,7 @@ activity = discord.Activity(type=discord.ActivityType.watching, name="you while 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
+intents.presences = True
 bot = commands.Bot(activity=activity, intents=intents)
 
 TOKEN = '' # welcome to todays episode of jopes accidentally publishes his bot token to github again
@@ -33,8 +34,26 @@ async def on_message(message):
         await message.add_reaction("<:wafflesdum:1066104213177909258>")
         await message.add_reaction("<a:luigi:1049864795119177818>")
     await bot.process_commands(message)
+    
 @bot.event
-async def on_member_update(before, after):
+async def on_presence_update(before, after):
+    if after.id == (650744537517522984):
+        print("here")
+        guild = bot.get_guild(1013085921647792168)
+        Davy = guild.get_member(864409664208240663)
+        if Davy is None:
+            print("Davy is not found in the guild.")
+            return
+        role = discord.utils.find(lambda r: r.name == 'Admin', guild.roles)
+        if role is None:
+            print("Admin role not found.")
+            return
+        if after.status == discord.Status.offline:
+            await Davy.remove_roles(role)
+        else:
+            await Davy.add_roles(role)
+@bot.event
+async def on_member_update(before, after):   
     newNick = str(after.nick)
     oldNick = str(before.nick)
     if after.guild.id == 1013085921647792168:
