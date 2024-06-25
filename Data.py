@@ -81,7 +81,7 @@ KartData = {
     'P-Wing':{'Speed':.5,'MiniTurbo':-.5,'Emojii':'<:MK8PWing:1126299090746085417>'}, 
     'Badwagon':{'Speed':.5,'MiniTurbo':-.5,'Emojii':'<:BadwagonBodyMK8:1126265962648326334>'}, 
     'GLA':{'Speed':.5,'MiniTurbo':-.5,'Emojii':'<:GLAMK8:1126298442822594632>'}, 
-    'Standard ATV':{'Speed':.5,'MiniTurbo':-.5,'Emojii':'<:Gold_Standard:1126298490620882984>'}, 
+    'Standard ATV':{'Speed':.5,'MiniTurbo':-.5,'Emojii':'<:StandardATVBodyMK8:1126299481017688126>'}, 
     'Prancer':{'Speed':.25,'MiniTurbo':-.25,'Emojii':'<:PrancerBodyMK8:1126299393952338020>'}, 
     'Sport Bike':{'Speed':.25,'MiniTurbo':-.25,'Emojii':'<:SportBikeBodyMK8:1126299478798905374>'}, 
     'Jet Bike':{'Speed':.25,'MiniTurbo':-.25,'Emojii':'<:JetBikeBodyMK8:1126298487785525380>'},
