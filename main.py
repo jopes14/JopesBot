@@ -1,4 +1,4 @@
-import discord
+﻿import discord
 import random
 from discord.ext import commands
 from Data import GetCharactersNames, GetGlidersNames, GetKartsNames, GetWheelsNames, CharacterData, KartData, WheelData, GliderData
@@ -10,10 +10,22 @@ intents.presences = True
 bot = commands.Bot(activity=activity, intents=intents)
 
 TOKEN = '' # welcome to todays episode of jopes accidentally publishes his bot token to github again
-
-@bot.event
+class MyView(discord.ui.View): # Create a class called MyView that subclasses discord.ui.View
+    @discord.ui.button(label="Click To Verify", style=discord.ButtonStyle.primary, emoji="<:iconnobackground:1255228642934657086>")
+    async def button_callback(self, button, interaction):
+        guild = bot.get_guild(1013085921647792168)
+        role = discord.utils.find(lambda r: r.name == 'Member', guild.roles)
+        mem = guild.get_member(interaction.user.id)
+        if role not in mem.roles:
+            await mem.add_roles(role)
+            await interaction.response.send_message("Verified", ephemeral=True)
+        else:
+            await interaction.response.send_message("You already have member", ephemeral=True)
+        
 @bot.event
 async def on_message(message):
+    if message.author.id == 650744537517522984 and message.content == "$verinit":
+        await message.channel.send(view=MyView())
     if message.author.id == 987931629685194782 and random.randint(0, 100) < 3:
         await message.channel.send('Waffles bad')
     if message.content.lower() in ['karttest', '/karttest', 'charactertest', '/charactertest']:
@@ -38,7 +50,6 @@ async def on_message(message):
 @bot.event
 async def on_presence_update(before, after):
     if after.id == (650744537517522984):
-        print("here")
         guild = bot.get_guild(1013085921647792168)
         Davy = guild.get_member(864409664208240663)
         if Davy is None:
