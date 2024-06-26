@@ -10,8 +10,11 @@ intents.presences = True
 bot = commands.Bot(activity=activity, intents=intents)
 
 TOKEN = '' # welcome to todays episode of jopes accidentally publishes his bot token to github again
-class MyView(discord.ui.View): # Create a class called MyView that subclasses discord.ui.View
-    @discord.ui.button(label="Click To Verify", style=discord.ButtonStyle.primary, emoji="<:iconnobackground:1255228642934657086>")
+class MyView(discord.ui.View):  # Create a class called MyView that subclasses discord.ui.View
+    def __init__(self):
+        super().__init__(timeout=None)
+    
+    @discord.ui.button(label="Click To Verify", style=discord.ButtonStyle.primary, emoji="<:iconnobackground:1255228642934657086>", custom_id="verify_button")
     async def button_callback(self, button, interaction):
         guild = bot.get_guild(1013085921647792168)
         role = discord.utils.find(lambda r: r.name == 'Member', guild.roles)
@@ -20,7 +23,7 @@ class MyView(discord.ui.View): # Create a class called MyView that subclasses di
             await mem.add_roles(role)
             await interaction.response.send_message("Verified", ephemeral=True)
         else:
-            await interaction.response.send_message("You already have member", ephemeral=True)
+            await interaction.response.send_message("You already have the member role", ephemeral=True)
         
 @bot.event
 async def on_message(message):
@@ -141,4 +144,7 @@ async def first_slash(ctx: discord.ApplicationContext, character: discord.Option
     embed.add_field(name="Percentile: " + str(weightpercentile), value=('\n(out of 100 karts this one would be better than ' + str(weightpercentile) + '\nof them)'), inline=True)
     embed.set_footer(text="Developed by Jopes on Youtube")
     await ctx.respond(embed=embed)
+@bot.event
+async def on_ready():
+    bot.add_view(MyView())
 bot.run(TOKEN)
