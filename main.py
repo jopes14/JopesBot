@@ -1,4 +1,4 @@
-﻿import discord
+import discord
 import random
 from discord.ext import commands
 from Data import GetCharactersNames, GetGlidersNames, GetKartsNames, GetWheelsNames, CharacterData, KartData, WheelData, GliderData
