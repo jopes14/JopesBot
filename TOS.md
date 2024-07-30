@@ -6,7 +6,7 @@ Description of Service
 JopesBot is a Discord bot designed for utility and statistics purposes. Users interact with the bot through commands sent in Discord servers.
 
 Data Collection and Usage
-JopesBot collects and stores Mario Kart Central IDs and usernames to associate Discord accounts with Mario Kart Central accounts. This data is used solely for this purpose and is not shared with any third parties.
+JopesBot collects and stores Mario Kart Central IDs, Mario Kart Central Usernames and Discord IDs to associate Discord accounts with Mario Kart Central accounts. This data is used solely for this purpose and is not shared with any third parties.
 
 Data Deletion and Viewing
 Users can request deletion of their data by using the /unlink command or by emailing jopesbusiness@gmail.com. Users can view their stored data by emailing the same address.
