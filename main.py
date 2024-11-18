@@ -1,4 +1,4 @@
-import discord
+﻿import discord
 import random
 from discord.ext import commands
 from Data import GetCharactersNames, GetGlidersNames, GetKartsNames, GetWheelsNames, CharacterData, KartData, WheelData, GliderData
@@ -26,7 +26,37 @@ class MyView(discord.ui.View):  # Create a class called MyView that subclasses d
             await interaction.response.send_message("You already have the member role", ephemeral=True)
         
 @bot.event
-async def on_message(message):
+async def on_message(message): #AC EMBED SENDER HERE
+    if message.author.id == 650744537517522984 and message.content == "$ac":
+        #1
+        await message.channel.send("# Royal Raceway")
+        await message.channel.send("https://media.discordapp.net/attachments/1301344785063477248/1302280327309430804/1.png?ex=673b5111&is=6739ff91&hm=686260d239ab83d2d89ec60a6c63a8de5f604a1742187dade756fff3b1408767&=&format=webp&quality=lossless\n")
+        
+        await message.channel.send("At the first turn to the left, over the lake\n⠀")
+        await message.channel.send("[**Normal**](https://www.youtube.com/watch?v=hgKvnvulwtM&t=57s)\nDifficulty: ⭐⭐\n⠀")
+        await message.channel.send("[**Shroomless**](https://youtu.be/IJHu8iyKnbE)\nDifficulty: ⭐⭐⭐⭐⭐")
+        #2
+        await message.channel.send("⠀\n⠀\n# Music Park")
+        await message.channel.send("https://media.discordapp.net/attachments/1301344785063477248/1302280326965362778/3.png?ex=673b5111&is=6739ff91&hm=154a78f1679cd6a53214cfc1ab79ef5efd5af71631698fc51e01a3774e3abf06&=&format=webp&quality=lossless\n")
+        
+        await message.channel.send("At the turn before the drum\n⠀")
+        await message.channel.send("[**Normal**](https://youtu.be/tOHvlULD1W0?si=XmX1qIWXfRY8CxKd&t=99)\nDifficulty: ⭐⭐⭐")
+        #3
+        await message.channel.send("⠀\n⠀\n# Sunshine Airport")
+        await message.channel.send("https://media.discordapp.net/attachments/1301344785063477248/1302280327636451362/2.png?ex=673b5111&is=6739ff91&hm=d79c64794831d41c92b1dd51de60041540a78a8dc1d0d721d6827f92993ef0dd&=&format=webp&quality=lossless\n")
+        
+        await message.channel.send("At the final turn before the glider, over the water\n⠀")
+        await message.channel.send("[**Normal**](https://youtu.be/P-JSI5qQEtU?si=X7P1P9BAj3BBm32U&t=66)\nDifficulty: ⭐⭐⭐⭐")
+        #4
+        await message.channel.send("⠀\n⠀\n# DK Jungle (Pre Wave 4 - Ver. 2.3.0)")
+        await message.channel.send("https://media.discordapp.net/attachments/1013170145176338493/1307889763713552475/2024-17-11--20-06-44.png?ex=673bf2c3&is=673aa143&hm=cfe1bb1f1eb7b3451132349c7fe58661c8339f6638f0af7214717d711f277252&=&format=webp&quality=lossless\n")
+        
+        await message.channel.send("At the very end of the course\n⠀")
+        await message.channel.send("[**Normal - Shroomless**](https://youtu.be/J07l5BO90lo?si=UKhibxk2EWV45a0X&t=37)\nDifficulty: ⭐⭐")
+        #End
+        await message.channel.send("⠀\n⠀\n⠀\n[**Candidate Document**](https://docs.google.com/document/d/1uh4SNfDFyjWt6TBAvXfTzniUP5s5Ee4O3az-Ol4o7F8/edit?usp=sharing)\nContains a list of every single corner in Mario Kart 8 Deluxe that has potential for an AntiCut")
+        
+        
     if message.author.id == 650744537517522984 and message.content == "$verinit":
         await message.channel.send(view=MyView())
     if message.author.id == 987931629685194782 and random.randint(0, 100) < 3:
